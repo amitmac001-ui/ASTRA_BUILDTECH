@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Get Your Free Quote</title>
+
+<style>
+
+body{
+margin:0;
+min-height:100vh;
+font-family:Arial;
+color:white;
+
+background:
+linear-gradient(
+rgba(2,10,25,0.75),
+rgba(2,10,25,0.85)
+),
+url('/static/images/products/hero.jpg');
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+}
+
+.box{
+width:85%;
+max-width:520px;
+margin:50px auto;
+padding:35px;
+
+background:rgba(10,25,45,0.75);
+backdrop-filter:blur(10px);
+
+border-radius:20px;
+box-shadow:0 20px 50px rgba(0,0,0,0.5);
+}
+
+h2{
+font-size:32px;
+color:#f5c542;
+margin-bottom:5px;
+}
+
+h2:after{
+content:"Tell us your requirement & our team will contact you";
+display:block;
+font-size:14px;
+color:white;
+margin-top:10px;
+font-weight:normal;
+}
+
+input,
+select,
+textarea{
+width:100%;
+padding:14px;
+margin:10px 0;
+border-radius:8px;
+border:none;
+font-size:16px;
+box-sizing:border-box;
+}
+
+button{
+width:100%;
+padding:16px;
+margin-top:20px;
+
+background:#f5c542;
+border:none;
+border-radius:10px;
+
+font-size:17px;
+font-weight:bold;
+cursor:pointer;
+}
+
+ul{
+list-style:none;
+padding:0;
+}
+
+li{
+display:flex;
+align-items:center;
+gap:12px;
+margin:15px 0;
+font-size:18px;
+}
+
+li input{
+width:20px;
+height:20px;
+}
+
+#id_service label{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:18px;
+}
+
+#id_service input{
+width:20px;
+height:20px;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="box">
+
+<h2>Start Your Project</h2>
+
+<form method="POST">
+
+{% csrf_token %}
+
+{{ form.as_p }}
+
+<button type="submit">
+Submit Requirement
+</button>
+
+</form>
+
+</div>
+
+
+</body>
+</html>

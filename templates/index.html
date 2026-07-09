@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>ASTRA BUILDTECH</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#ffffff;
+color:#071327;
+}
+
+
+/* HEADER */
+
+.header{
+height:90px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:12px 7%;
+background:#06162c;
+box-shadow:0 2px 15px #ddd;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#06285c;
+}
+
+
+.logo span{
+color:#d99a00;
+}
+
+
+.menu a{
+margin:0 15px;
+font-size:16px;
+font-weight:bold;
+text-decoration:none;
+color:#071327;
+}
+
+
+.start-btn{
+background:#06285c;
+color:white!important;
+padding:15px 25px;
+border-radius:8px;
+}
+
+
+.menu-btn{
+display:none;
+font-size:35px;
+color:white;
+}
+
+/* HERO SECTION */
+
+.hero{
+min-height:85vh;
+display:flex;
+align-items:center;
+padding:8%;
+background:
+linear-gradient(
+90deg,
+rgba(5,20,45,0.95),
+rgba(5,20,45,0.5)
+),
+url('/static/images/products/hero.jpg');
+
+background-size:cover;
+background-position:center;
+color:white;
+}
+
+
+.hero-content{
+max-width:650px;
+}
+
+
+.hero h5{
+color:#f4b400;
+font-size:18px;
+margin-bottom:20px;
+}
+
+
+.hero h1{
+font-size:65px;
+line-height:1.1;
+}
+
+
+.hero p{
+font-size:22px;
+margin-top:25px;
+line-height:1.6;
+}
+
+
+.hero-buttons{
+margin-top:35px;
+}
+
+
+.btn-yellow{
+background:#f4b400;
+padding:18px 30px;
+border-radius:8px;
+font-weight:bold;
+color:black;
+text-decoration:none;
+display:inline-block;
+}
+
+
+.btn-border{
+border:2px solid white;
+padding:16px 30px;
+border-radius:8px;
+color:white;
+text-decoration:none;
+margin-left:15px;
+display:inline-block;
+}
+
+
+/* SERVICE CARDS */
+
+.section{
+padding:70px 7%;
+text-align:center;
+}
+
+
+.cards{
+margin-top:40px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:25px;
+}
+
+
+.card{
+box-shadow:0 5px 20px #ccc;
+border-radius:15px;
+overflow:hidden;
+text-align:left;
+background:white;
+}
+
+
+.card img{
+width:100%;
+height:auto;
+object-fit:contain;
+border-radius:15px;
+}
+
+
+.card div{
+padding:20px;
+}
+
+
+.card h3{
+color:#06285c;
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.menu{
+display:none;
+}
+
+.menu-btn{
+display:block;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+}
+
+@media(max-width:768px){
+
+.menu.show{
+display:flex;
+position:absolute;
+top:90px;
+left:0;
+width:100%;
+background:white;
+flex-direction:column;
+padding:20px;
+box-shadow:0 10px 20px #ccc;
+}
+
+.menu.show a{
+padding:15px;
+}
+
+}
+
+.quote-text{
+margin-top:20px;
+font-size:18px;
+color:white;
+}
+
+.gallery{
+padding:70px 7%;
+background:white;
+text-align:center;
+}
+
+.gallery h1{
+font-size:40px;
+color:#06162c;
+}
+
+.slider{
+display:flex;
+overflow-x:auto;
+scroll-snap-type:x mandatory;
+gap:20px;
+border-radius:20px;
+
+scroll-behavior:smooth;
+}
+
+.slider::-webkit-scrollbar{
+display:none;
+}
+
+.slider img{
+min-width:100%;
+height:450px;
+object-fit:cover;
+border-radius:20px;
+scroll-snap-align:center;
+}
+
+}
+
+@keyframes slide{
+
+0%{
+transform:translateX(0);
+}
+
+25%{
+transform:translateX(0);
+}
+
+35%{
+transform:translateX(-100%);
+}
+
+55%{
+transform:translateX(-100%);
+}
+
+65%{
+transform:translateX(-200%);
+}
+
+85%{
+transform:translateX(-200%);
+}
+
+100%{
+transform:translateX(-300%);
+}
+
+}
+
+.whatsapp{
+position:fixed;
+right:25px;
+bottom:25px;
+
+width:60px;
+height:60px;
+
+background:#25D366;
+color:white;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:32px;
+
+border-radius:50%;
+text-decoration:none;
+
+box-shadow:0 10px 25px rgba(0,0,0,.4);
+
+z-index:999;
+}
+
+
+footer{
+background:#06162c;
+color:white;
+
+text-align:center;
+
+padding:40px 20px;
+}
+
+
+footer h2{
+color:#f5c542;
+font-size:32px;
+}
+
+
+footer p{
+font-size:17px;
+line-height:1.5;
+}
+
+
+.copy{
+margin-top:25px;
+opacity:.7;
+font-size:14px;
+}
+
+.about{
+padding:70px 8%;
+background:#07111f;
+color:white;
+}
+
+.about-box{
+max-width:900px;
+margin:auto;
+text-align:center;
+
+background:#101d30;
+padding:40px;
+
+border-radius:25px;
+box-shadow:0 15px 40px rgba(0,0,0,.4);
+}
+
+.about h1{
+font-size:40px;
+color:#f5c542;
+margin-bottom:25px;
+}
+
+.about p{
+font-size:18px;
+line-height:1.7;
+}
+
+.logo img{
+height:85px;
+width:auto;
+object-fit:contain;
+}
+
+.bottom-contact{
+position:fixed;
+bottom:0;
+left:0;
+
+width:100%;
+height:60px;
+
+background:#06162c;
+
+display:flex;
+justify-content:space-around;
+align-items:center;
+
+z-index:999;
+
+box-shadow:0 -5px 20px rgba(0,0,0,.3);
+}
+
+
+.bottom-contact a{
+color:white;
+text-decoration:none;
+
+font-size:16px;
+font-weight:bold;
+}
+
+.faq{
+padding:70px 8%;
+background:white;
+}
+
+.faq h1{
+text-align:center;
+font-size:40px;
+color:#00172f;
+margin-bottom:40px;
+}
+
+.faq-box{
+max-width:900px;
+margin:auto;
+}
+
+details{
+background:#fff;
+padding:20px;
+margin:15px 0;
+border-radius:15px;
+box-shadow:0 10px 25px #ddd;
+}
+
+summary{
+font-size:18px;
+font-weight:bold;
+color:#00316b;
+cursor:pointer;
+}
+
+details p{
+margin-top:15px;
+font-size:16px;
+line-height:1.5;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<div class="header">
+
+<div class="logo">
+
+<img src="/static/images/logo.png">
+
+</div>
+
+<div class="menu">
+
+<a href="#home">Home</a>
+
+<a href="#products">Products</a>
+
+<a href="#projects">Our Projects</a>
+
+<a href="#contact">Contact Us</a>
+
+<a href="#faq">FAQ</a>
+
+<a class="start-btn" href="/customer/start-project/">
+Get Your Free Quote
+</a>
+
+</div>
+
+
+<div onclick="openMenu()" class="menu-btn">
+☰
+</div>
+
+
+</div>
+
+
+
+<!-- HERO -->
+
+
+<section class="hero" id="home">
+
+
+<div class="hero-content">
+
+<h5>
+SMART BUILDING SOLUTIONS
+</h5>
+
+
+<h1>
+Upgrade Your Space<br>
+With Modern Solutions
+</h1>
+
+
+<p>
+Premium Aluminium & Glass Solutions<br>
+Sliding Windows • Doors • Glass Work • PVC Ceiling<br>
+Trusted Professional Installation
+</p>
+
+
+<div class="hero-buttons">
+
+<a class="btn-yellow" href="/customer/start-project/">
+Get Your Free Quote
+</a>
+
+<p class="quote-text">
+Tell us your requirement & our team will contact you
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+<!-- SERVICES -->
+
+
+<section class="section" id="products">
+
+<h1>
+Explore Our Solutions
+</h1>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<img src="/static/images/products/window.jpg">
+
+<div>
+<h3>Premium Sliding  Windows</h3>
+<p>Modern window solutions for every space.</p>
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<img src="/static/images/products/door.jpg">
+
+<div>
+<h3>Aluminium  Doors</h3>
+<p>Premium aluminium door solutions with professional installation.</p>
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<img src="/static/images/products/glass.jpg">
+
+<div>
+<h3>Glass Solutions</h3>
+<p>Partitions, cabins and glass designs.</p>
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="/static/images/products/ceiling.jpg">
+
+<div>
+<h3>PVC Ceiling Solutions</h3>
+<p>Modern ceiling solutions for homes and commercial spaces.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- HOW IT WORKS -->
+
+
+<section class="section">
+
+<h1>How ASTRA Works</h1>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<div>
+
+<h3>1. Share Requirement</h3>
+
+<p>
+Tell us what you need for your home or workspace.
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<div>
+
+<h3>2. Expert Support</h3>
+
+<p>
+Get professional guidance and project planning.
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<div>
+
+<h3>3. Quality Installation</h3>
+
+<p>
+Complete your project with trusted professionals.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+<!-- WHY CHOOSE -->
+
+
+<section class="section">
+
+<h1>Why Choose ASTRA?</h1>
+
+
+<div class="cards">
+
+
+<div class="card">
+<div>
+
+<h3>✔ Quality Materials</h3>
+
+<p>
+Reliable solutions with trusted products.
+</p>
+
+</div>
+</div>
+
+
+<div class="card">
+<div>
+
+<h3>✔ Professional Service</h3>
+
+<p>
+Skilled experts for better finishing.
+</p>
+
+</div>
+</div>
+
+
+
+<div class="card">
+<div>
+
+<h3>✔ After Service Support</h3>
+
+<p>
+Support even after project completion.
+</p>
+
+</div>
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+<section class="section">
+
+<h1>Ready to Upgrade Your Space?</h1>
+
+<br>
+
+<a class="start-btn" href="/customer/start-project/">
+Start Your Project
+</a>
+
+</section>
+
+<script>
+
+function openMenu(){
+
+document.querySelector(".menu").classList.toggle("show");
+
+}
+
+window.onload = function(){
+
+let slider = document.querySelector('.slider');
+
+setInterval(function(){
+
+if(slider){
+
+slider.scrollBy({
+left: slider.clientWidth,
+behavior: "smooth"
+});
+
+if(slider.scrollLeft + slider.clientWidth >= slider.scrollWidth){
+slider.scrollTo({
+left:0,
+behavior:"smooth"
+});
+}
+
+}
+
+},3000);
+
+}
+
+</script>
+
+<!-- FAQ SECTION -->
+
+<section class="faq" id="faq">
+
+<h1>Frequently Asked Questions</h1>
+
+<div class="faq-box">
+
+<details>
+<summary>Do you provide customized aluminium & glass solutions?</summary>
+<p>Yes, we provide customized solutions as per your space, size and requirements.</p>
+</details>
+
+<details>
+<summary>Which services do you provide?</summary>
+<p>We provide Sliding Windows, Aluminium Doors, Glass Work, Partitions and PVC Ceiling solutions.</p>
+</details>
+
+<details>
+<summary>Do you provide installation service?</summary>
+<p>Yes, our team provides professional installation support.</p>
+</details>
+
+<details>
+<summary>Which areas do you provide service in?</summary>
+<p>Currently, we provide our services in Dahanu and nearby areas. We are continuously working to expand our service network to cover more locations in the future.</p>
+</details>
+
+<details>
+<summary>Can I get a free quotation before starting work?</summary>
+<p>Yes, you can share your requirement and our team will provide a free quote.</p>
+</details>
+
+<details>
+<summary>Do you make custom size windows and doors?</summary>
+<p>Yes, all products are made according to your required measurements.</p>
+</details>
+
+<details>
+<summary>Do you provide repair or only new installation?</summary>
+<p>We provide both new installation and service support.</p>
+</details>
+
+<details>
+<summary>What type of glass options are available?</summary>
+<p>We provide different glass options based on design, safety and customer requirements.</p>
+</details>
+
+</div>
+
+</section>
+
+<!-- ABOUT ASTRA -->
+
+<section class="about">
+
+<div class="about-box">
+
+<h1>About ASTRA BUILDTECH</h1>
+
+<p>
+ASTRA BUILDTECH provides premium aluminium and glass solutions
+with modern designs, quality materials and professional installation.
+</p>
+
+<p>
+We specialize in Sliding Windows, Aluminium Doors,
+Glass Work and PVC Ceiling Solutions for homes and commercial spaces.
+</p>
+
+</div>
+
+</section>
+
+<section class="gallery" id="projects">
+
+<h1>Our Completed Projects</h1>
+
+<p>Explore our premium aluminium & glass work</p>
+
+<div class="slider">
+
+<img src="/static/images/gallery/project1.jpg">
+<img src="/static/images/gallery/project2.jpg">
+<img src="/static/images/gallery/project3.jpg">
+<img src="/static/images/gallery/project4.jpg">
+
+</div>
+
+</section>
+
+<!-- WhatsApp Floating Button -->
+
+<a class="whatsapp"
+href="https://wa.me/919356961833"
+target="_blank">
+
+💬
+
+</a>
+
+
+<!-- Footer -->
+
+<footer id="contact">
+
+<h2>ASTRA BUILDTECH</h2>
+
+<p>
+Premium Aluminium & Glass Solutions
+</p>
+
+<p>
+Sliding Windows • Doors • Glass Work • PVC Ceiling
+</p>
+
+<p>
+📍 Dahanu | Palghar
+</p>
+
+<p>
+📞 +91 9356961833
+</p>
+
+<p class="copy">
+© 2026 ASTRA BUILDTECH. All Rights Reserved.
+</p>
+
+</footer>
+
+<!-- STICKY CONTACT BAR -->
+
+<div class="bottom-contact">
+
+<a href="tel:+919356961833">
+📞 Call
+</a>
+
+<a href="https://wa.me/919356961833">
+💬 WhatsApp
+</a>
+
+<a href="/customer/start-project/">
+📝 Quote
+</a>
+
+</div>
+
+</body>
+
+</html>
