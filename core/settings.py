@@ -25,7 +25,11 @@ SECRET_KEY = 'django-insecure-(7uc)^xu_0uix0ck_cmdb*a@p_x_)*gz9sb-&vki21(z*+9x6u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'astra-buildtech.onrender.com',
+    'localhost',
+    '127.0.0.1',
+]
 
 
 # Application definition
