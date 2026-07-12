@@ -466,6 +466,35 @@ font-size:16px;
 line-height:1.5;
 }
 
+/* Announcement Bar */
+
+.announcement-bar{
+    width:100%;
+    background:#FFC107;
+    color:#000;
+    overflow:hidden;
+    white-space:nowrap;
+    padding:12px 0;
+    font-weight:bold;
+    font-size:16px;
+}
+
+.announcement-track{
+    display:inline-block;
+    white-space:nowrap;
+    padding-left:100%;
+    animation:marquee 18s linear infinite;
+}
+
+@keyframes marquee{
+    0%{
+        transform:translateX(0);
+    }
+    100%{
+        transform:translateX(-100%);
+    }
+}
+
 </style>
 
 </head>
@@ -514,6 +543,23 @@ Get Your Free Quote
 
 <!-- HERO -->
 
+<!-- Announcement Bar -->
+
+<div class="announcement-bar">
+    <div class="announcement-track">
+
+        ⭐ Sliding Windows &nbsp;&nbsp;&nbsp;
+
+        ⭐ Aluminium Doors &nbsp;&nbsp;&nbsp;
+
+        ⭐ Office Partitions &nbsp;&nbsp;&nbsp;
+
+        ⭐ PVC Ceiling &nbsp;&nbsp;&nbsp;
+
+        ⭐ Mosquito Mesh &nbsp;&nbsp;&nbsp;
+
+    </div>
+</div>
 
 <section class="hero" id="home">
 
